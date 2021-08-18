@@ -1,2 +1,1 @@
-# vuex-futebol-app
-App Futebol with Vue, Vuex etc...
+# App with Vuex Futebol
