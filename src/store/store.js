@@ -48,6 +48,10 @@ export default new Vuex.Store({
   mutations: {
     setChampioship(state, newValue) {
       state.championship = newValue
+    },
+
+    setClubName(state, newName) {
+      state.clubName = newName
     }
   },
 
@@ -55,6 +59,10 @@ export default new Vuex.Store({
     changeChampioship(context, value) {
       // chama a função setChampioship da mutation e envia o valu como param
       context.commit('setChampioship', value)
+    },
+
+    updateClubName(context, value) {
+      context.commit('setClubName', value)
     }
   }
 
