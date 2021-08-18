@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import HcodeHeader from './components/HcodeHeader'
 import HcodeFooter from './components/HcodeFooter'
 import HcodeSection from './components/HcodeSection'
@@ -36,11 +37,15 @@ export default {
     }
   },
   methods: {
-    changeChampionship(value) {
+    //changeChampionship(value) {
       // mutation usam o commit e passando nome do método criado nele
-      this.$store.commit('setChampioship', value)// valu é passado o valor logo acima
+      // valu é passado o valor logo acima
+      // this.$store.commit('setChampioship', value)
 
-    },
+    ...mapMutations({ 
+      changeChampionship: 'setChampioship' 
+    }),
+
     changeComponent(value) {
 
       let component;
