@@ -49,6 +49,13 @@ export default new Vuex.Store({
     setChampioship(state, newValue) {
       state.championship = newValue
     }
+  },
+
+  actions: {
+    changeChampioship(context, value) {
+      // chama a função setChampioship da mutation e envia o valu como param
+      context.commit('setChampioship', value)
+    }
   }
 
 })

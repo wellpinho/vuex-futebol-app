@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 import HcodeHeader from './components/HcodeHeader'
 import HcodeFooter from './components/HcodeFooter'
 import HcodeSection from './components/HcodeSection'
@@ -42,8 +42,9 @@ export default {
       // valu é passado o valor logo acima
       // this.$store.commit('setChampioship', value)
 
-    ...mapMutations({ 
-      changeChampionship: 'setChampioship' 
+    ...mapActions({
+      // get action method and say for mutation work!
+      changeChampionship: 'changeChampioship' 
     }),
 
     changeComponent(value) {
