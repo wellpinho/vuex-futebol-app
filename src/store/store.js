@@ -43,5 +43,12 @@ export default new Vuex.Store({
     getNews(state) {
       return state.news
     }
+  },
+
+  mutations: {
+    setChampioship(state, newValue) {
+      state.championship = newValue
+    }
   }
+
 })

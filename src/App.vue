@@ -37,8 +37,8 @@ export default {
   },
   methods: {
     changeChampionship(value) {
-
-      this.championship = value;
+      // mutation usam o commit e passando nome do método criado nele
+      this.$store.commit('setChampioship', value)// valu é passado o valor logo acima
 
     },
     changeComponent(value) {
